@@ -1,10 +1,12 @@
 import asyncio
 
 from api import run_api
+from dadabase import connect_database
 
 
 async def main():
-   await run_api()
+    connect_database()
+    await run_api()
 
 
 if __name__ == '__main__':
